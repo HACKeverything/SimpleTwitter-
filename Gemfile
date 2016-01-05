@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "pry", group: :development
 
-gem "bcrypt-ruby"
+gem "bcrypt-ruby", '3.1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
