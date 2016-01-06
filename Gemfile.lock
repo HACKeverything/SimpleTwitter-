@@ -37,6 +37,15 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    awesome_print (1.6.1)
+    awesome_rails_console (0.2.1)
+      awesome_print
+      hirb
+      hirb-unicode
+      pry-byebug
+      pry-rails
+      pry-stack_explorer
+      railties
     bcrypt-ruby (3.1.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -56,6 +65,10 @@ GEM
     execjs (2.6.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hirb (0.7.3)
+    hirb-unicode (0.0.5)
+      hirb (~> 0.5)
+      unicode-display_width (~> 0.1.1)
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -80,6 +93,14 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.3.0)
+      byebug (~> 8.0)
+      pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
+    pry-stack_explorer (0.4.9.2)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -140,6 +161,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicode-display_width (0.1.1)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -150,6 +172,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_rails_console
   bcrypt-ruby (= 3.1.2)
   byebug
   coffee-rails (~> 4.1.0)
