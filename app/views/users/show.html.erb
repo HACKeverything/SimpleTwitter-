@@ -1,5 +1,7 @@
 <h3><%= link_to "@#{@user.username}", user_path(@user.username) %></h3>
 
+<%= link_to "+ follow", follow_user_path(@user) %>
+
 <p>
   <% @user.statuses.each do |status| %>
     <li><%= status.body %></li>
