@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user, only: [:follow]
+  before_action :require_user, only: [:follow, :timeline]
   
   def index
     @users = User.all
@@ -33,6 +33,27 @@ class UsersController < ApplicationController
     else
       wrong_path
     end
+  end
+
+  def unfollow
+    user = User.find(params[:id])
+    rel = Relationship.where(follower_id: current_user.id, leader_id: user.id).first
+
+    if user && rel
+      rel.destroy
+      flash[:notice] = "You are no longer following #{user.username}"
+      redirect_to user_path(user.username)
+    else
+      wrong_path
+    end
+  end
+
+  def timeline
+    @statuses = []
+    current_user.following_users.each do |user|
+      @statuses << user.statuses.all
+    end
+    @statuses.flatten!
   end
 
   private
